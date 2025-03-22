@@ -129,7 +129,7 @@ function IS:Dialog()
     elseif page == Pages.Details then
       AddImageScripts { I.Media.Installer.DetailsOne, I.Media.Installer.DetailsTwo }
     elseif page == Pages.Plater then
-      AddImageScripts { I.Media.Installer.Plater }
+      AddImageScripts { I.Media.Installer.PlaterNew, I.Media.Installer.PlaterOld }
     elseif page == Pages.BigWigs then
       AddImageScripts { I.Media.Installer.BigWigs }
     elseif page == Pages.WeakAuras then
@@ -344,15 +344,32 @@ function IS:Dialog()
           installFrame.Desc1:SetText(
             "Plater 是一个名条插件，具有大量设置，开箱即用的减益追踪，威胁着色，支持类似 WeakAuras 和 wago.io 的脚本，以及 WeakAuras-Companion 用于 Mod/Script/配置文件更新。"
           )
-          installFrame.Desc2:SetText("这是一个可选的插件要求，但我们强烈建议你安装它。")
-          installFrame.Desc3:SetText("重要性: " .. F.String.Error("高"))
+            installFrame.Desc2:SetText(
+            F.String.Warning("注意: ")
+              .. "这个 "
+              .. F.String.Error("[过时的]")
+              .. " 配置文件是 "
+              .. TXUI.Title
+              .. " 6.9.0 之前的版本，并且不会再更新。请自行谨慎使用。"
+            )
+            installFrame.Desc3:SetText("重要性: " .. F.String.Error("高"))
 
           installFrame.Option1:Show()
           installFrame.Option1:SetText("Plater")
           installFrame.Option1:SetScript("OnClick", function()
-            PF:Plater()
+            PF:Plater("new")
             self.reloadRequired = true
             self:ShowStepComplete(F.String.ToxiUI("Plater") .. " 配置文件已安装。")
+            installFrame.Next:Click()
+          end)
+
+          installFrame.Option2:Show()
+          installFrame.Option2:SetText("Plater" .. F.String.Error(" [OUTDATED]"))
+          installFrame.Option2:SetWidth(installFrame.Option2:GetWidth() * 1.5)
+          installFrame.Option2:SetScript("OnClick", function()
+            PF:Plater("old")
+            self.reloadRequired = true
+            self:ShowStepComplete(F.String.ToxiUI("Plater") .. F.String.Error(" [OUTDATED]") .. " profile installed.")
             installFrame.Next:Click()
           end)
         else

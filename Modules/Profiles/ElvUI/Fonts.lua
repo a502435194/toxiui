@@ -58,6 +58,12 @@ function PF:ElvUIFont()
           outline = F.FontStyleOverride(I.Fonts.Primary, "SHADOWOUTLINE"),
         },
 
+        objective = {
+          enable = true,
+          font = F.FontOverride(I.Fonts.Primary),
+          outline = F.FontStyleOverride(I.Fonts.Primary, "SHADOW"),
+        },
+
         questsmall = {
           enable = true,
           font = F.FontOverride(I.Fonts.Primary),
@@ -107,7 +113,7 @@ function PF:ElvUIFont()
 
       minimap = {
         locationFont = F.FontOverride(I.Fonts.Primary),
-        locationFontSize = F.FontSizeScaled(22),
+        locationFontSize = F.FontSizeScaled(16),
         locationFontOutline = F.FontStyleOverride(I.Fonts.Primary, "SHADOWOUTLINE"),
 
         icons = {
@@ -642,12 +648,20 @@ function PF:ElvUIFontPrivates()
     general = {
       -- General
       chatBubbleFont = F.FontOverride(I.Fonts.Primary),
-      chatBubbleFontSize = F.FontSizeScaled(14),
+      chatBubbleFontSize = F.FontSizeScaled(10),
       chatBubbleFontOutline = F.FontStyleOverride(I.Fonts.Primary, "SHADOWOUTLINE"),
 
       -- Blizzard
       dmgfont = F.FontOverride(I.Fonts.TitleBlack),
       namefont = F.FontOverride(I.Fonts.Primary),
+
+      -- Blizzard Nameplates
+      nameplateFont = F.FontOverride(I.Fonts.Primary),
+      nameplateFontOutline = F.FontStyleOverride(I.Fonts.Primary, "SHADOWOUTLINE"),
+      nameplateFontSize = F.FontSizeScaled(8),
+      nameplateLargeFont = F.FontOverride(I.Fonts.Primary),
+      nameplateLargeFontOutline = F.FontStyleOverride(I.Fonts.Primary, "SHADOWOUTLINE"),
+      nameplateLargeFontSize = F.FontSizeScaled(10),
     },
   })
 

@@ -821,7 +821,7 @@ P.wunderbar = {
       twentyFour = GetCurrentRegion() ~= 1, -- sets 24h for everyone, except US
       timeFormat = "HH:MM", -- valid are HH:MM, H:MM, H:M
 
-      showRestingAnimation = false,
+      showRestingAnimation = true,
       experimentalDynamicSize = false,
 
       textOffset = 1,
@@ -934,10 +934,10 @@ P.wunderbar = {
       displayedCurrency = "GOLD", -- NEEDS to be GOLD
       enabledCurrencies = {
         [3008] = true, --               Valorstones
-        [2914] = true, -- Weathered Harbinger Crest
-        [2915] = true, --    Carved Harbinger Crest
-        [2916] = true, --     Runed Harbinger Crest
-        [2917] = true, --    Gilded Harbinger Crest
+        [3107] = true, -- Weathered Undermine Crest
+        [3108] = true, --    Carved Undermine Crest
+        [3109] = true, --     Runed Undermine Crest
+        [3110] = true, --    Gilded Undermine Crest
         [2815] = true, --        Resonance Crystals
         [3028] = true, --       Restored Coffer Key
       }, -- Format: [currencyID] = true,
@@ -1200,4 +1200,8 @@ P.wunderbar = {
       textColor = false,
     },
   },
+}
+
+P.performance = {
+  profiler = true,
 }

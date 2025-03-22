@@ -66,6 +66,7 @@ F.AddMedia("icon", "Skins")
 F.AddMedia("icon", "Themes")
 F.AddMedia("icon", "WunderBar")
 F.AddMedia("icon", "Styles")
+F.AddMedia("icon", "Performance")
 
 -- -----
 --   ROLE ICONS
@@ -144,7 +145,8 @@ F.AddMedia("logo", "Youtube")
 F.AddMedia("installer", "Layouts")
 F.AddMedia("installer", "DetailsOne")
 F.AddMedia("installer", "DetailsTwo")
-F.AddMedia("installer", "Plater")
+F.AddMedia("installer", "PlaterNew")
+F.AddMedia("installer", "PlaterOld")
 F.AddMedia("installer", "BigWigs")
 F.AddMedia("installer", "WeakAuras")
 F.AddMedia("installer", "OmniCD")
