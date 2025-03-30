@@ -516,7 +516,7 @@ function F.String.Menu.Reset()
 end
 
 function F.String.Menu.Performance()
-  return F.String.FastGradientHex("Performance", "#00ff31", "#00ffdc")
+  return F.String.FastGradientHex("性能", "#00ff31", "#00ffdc")
 end
 
 -- Credits to WunderUI

@@ -11,9 +11,9 @@ function O:Performance()
   do
     -- ToxiUI Website Group
     local performanceProfiler = self:AddInlineDesc(options, {
-      name = "AddOn Profiler",
+      name = "插件性能分析器",
     }, {
-      name = "To no one's surprise, recent Blizzard's AddOn Profiler is tanking FPS. Luckyone has found a solution.\n\n",
+      name = "毫不意外，最近暴雪的插件性能分析器正在拖慢FPS。Luckyone找到了解决方案。\n\n",
     }).args
 
     -- ToxiUI Website URL
